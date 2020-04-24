@@ -1,0 +1,15 @@
+[andrea@hpmicro ex1_14]$ docker build -t ex1_14_img --network host .
+[andrea@hpmicro ex1_14]$ docker run -d --name=ex1_14 -p 3000:3000 ex1_14_img
+785a778555d7de918e0b4cebac028ae7e290255f76b8e85559d9ecaf4d637e2f
+[andrea@hpmicro ex1_14]$ wget http://127.0.0.1:3000
+--2020-04-24 18:23:43--  http://127.0.0.1:3000/
+Connecting to 127.0.0.1:3000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: 'index.html'
+
+index.html                             [ <=>                                                             ]   2.34K  --.-KB/s    in 0s      
+
+2020-04-24 18:23:45 (27.7 MB/s) - 'index.html' saved [2398]
+
+
