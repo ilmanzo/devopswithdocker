@@ -1,0 +1,34 @@
+[andrea@hpmicro ex_12]$ docker ps -as
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                          PORTS               NAMES               SIZE
+fcf5927a9367        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) About a minute ago                       nostalgic_greider   0B (virtual 127MB)
+277e9368322f        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) About a minute ago                       hungry_raman        0B (virtual 127MB)
+7540dd8b9347        nginx               "nginx -g 'daemon of…"   3 minutes ago       Up 3 minutes                    80/tcp              admiring_brattain   2B (virtual 127MB)
+c391ff535e24        nginx               "nginx -g 'daemon of…"   21 minutes ago      Exited (0) 21 minutes ago                           serene_kowalevski   0B (virtual 127MB)
+
+
+
+[andrea@hpmicro ex_12]$ docker stop 7540dd8b9347
+7540dd8b9347
+
+
+[andrea@hpmicro ex_12]$ docker rm fcf5927a9367 277e9368322f 7540dd8b9347 c391ff535e24
+fcf5927a9367
+277e9368322f
+7540dd8b9347
+c391ff535e24
+
+
+[andrea@hpmicro ex_12]$ docker rmi nginx
+Untagged: nginx:latest
+Untagged: nginx@sha256:f1a695380f06cf363bf45fa85774cfcb5e60fe1557504715ff96a1933d6cbf51
+Deleted: sha256:e791337790a6181d5ce870b3bb16de1a4d5aa3a916e8fba6907f57eb409934cf
+Deleted: sha256:615a169a3412634ebf75d5f0f5162290fb6042ba36285bd0ddc9ee123165b95e
+Deleted: sha256:bd32d67adcec3dba661c5afebc8a2a5413e68a3283b5ad7df134ed86f00b380a
+Deleted: sha256:b60e5c3bcef2f42ec42648b3acf7baf6de1fa780ca16d9180f3b4a3f266fe7bc
+
+
+[andrea@hpmicro ex_12]$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[andrea@hpmicro ex_12]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+

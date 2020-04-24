@@ -1,0 +1,26 @@
+[andrea@hpmicro part1]$ docker run -d nginx
+7540dd8b934724efcc4f3d13fa7aa37356004765d1b84333d04b29b58a271825
+[andrea@hpmicro part1]$ docker run -d nginx
+277e9368322f285d829babb91a4f2503c67cedc92c4b5559e7506b1aa8a8b1a3
+[andrea@hpmicro part1]$ docker run -d nginx
+fcf5927a936790aa29f79a884f5c4837ab8d4dae53ab9a40595f913599869ee6
+
+
+[andrea@hpmicro part1]$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+fcf5927a9367        nginx               "nginx -g 'daemon of…"   37 seconds ago      Up 33 seconds       80/tcp              nostalgic_greider
+277e9368322f        nginx               "nginx -g 'daemon of…"   43 seconds ago      Up 38 seconds       80/tcp              hungry_raman
+7540dd8b9347        nginx               "nginx -g 'daemon of…"   49 seconds ago      Up 44 seconds       80/tcp              admiring_brattain
+
+
+[andrea@hpmicro part1]$ docker stop fcf5927a9367 277e9368322f
+fcf5927a9367
+277e9368322f
+
+
+[andrea@hpmicro part1]$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS               NAMES
+7540dd8b9347        nginx               "nginx -g 'daemon of…"   About a minute ago   Up About a minute   80/tcp              admiring_brattain
+
+
+

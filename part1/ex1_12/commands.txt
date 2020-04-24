@@ -1,0 +1,11 @@
+[andrea@hpmicro ex1_12]$ docker build -f ./Dockerfile_frontend . --network host -t frontend_img
+[andrea@hpmicro ex1_12]$ docker build -f ./Dockerfile_backend . --network host -t backend_img
+[andrea@hpmicro ex1_12]$ docker run -d --name=frontend -p 5000:5000 frontend_img npm start
+[andrea@hpmicro ex1_12]$ docker run -d --name=backend -p 8000:8000 backend_img npm start
+
+
+[andrea@hpmicro ex1_12]$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS                    NAMES
+80a1cddcd02d        backend_img         "npm start"         7 seconds ago        Up 3 seconds        0.0.0.0:8000->8000/tcp   backend
+a62681155d1b        frontend_img        "npm start"         About a minute ago   Up About a minute   0.0.0.0:5000->5000/tcp   frontend
+

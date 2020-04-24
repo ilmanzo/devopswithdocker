@@ -1,0 +1,32 @@
+[andrea@hpmicro ex1_13]$ docker build -t ex1_13_img --network host .
+[andrea@hpmicro ex1_13]$ docker run -d --name=ex1_13 -p 8080:8080 ex1_13_img
+
+
+[andrea@hpmicro ex1_13]$ wget http://127.0.0.1:8080
+--2020-04-24 17:33:28--  http://127.0.0.1:8080/
+Connecting to 127.0.0.1:8080... connected.
+HTTP request sent, awaiting response... 200 
+Length: unspecified [text/html]
+Saving to: 'index.html'
+
+index.html                             [ <=>                                                             ]     668  --.-KB/s    in 0s      
+
+2020-04-24 17:33:29 (50.9 MB/s) - 'index.html' saved [668]
+
+[andrea@hpmicro ex1_13]$ cat index.html 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbM
+Qv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <title>Spring</title>
+        <meta charset="UTF-8" />
+
+    </head>
+    <body style="width: fit-content; padding-top: 3em; margin: auto;">
+        <form action="/press" method="post">
+            <button class="btn btn-info btn-outline-dark" type="submit">Press here</button>
+        </form>
+        <p style="width: fit-content; margin: auto;"></p>
+    </body>
+</html>
+

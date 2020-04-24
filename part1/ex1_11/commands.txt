@@ -1,0 +1,26 @@
+[andrea@hpmicro ex1_11]$ docker build . --network host -t ex1_11
+[andrea@hpmicro ex1_11]$ mkdir backend
+[andrea@hpmicro ex1_11]$ touch backend/logs.txt
+
+[andrea@hpmicro ex1_11]$ docker run -d --name=ex1_11 -p 8000:8000 \
+              -v $(pwd)/backend/logs.txt:/backend-example-docker/logs.txt \
+              ex1_11 npm start
+
+[andrea@hpmicro ex1_11]$ wget http://127.0.0.1:8000
+--2020-04-24 16:33:24--  http://127.0.0.1:8000/
+Connecting to 127.0.0.1:8000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 56 [text/html]
+Saving to: 'index.html'
+
+index.html                100%[===================================>]      56  --.-KB/s    in 0s
+
+2020-04-24 16:33:24 (4.97 MB/s) - 'index.html' saved [56/56]
+
+
+[andrea@hpmicro ex1_11]$ cat backend/logs.txt 
+4/24/2020, 2:33:24 PM: Connection received in root
+
+
+
+

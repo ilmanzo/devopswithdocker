@@ -1,0 +1,21 @@
+[andrea@hpmicro ex_18]$ mkdir app
+[andrea@hpmicro ex_18]$ touch app/logs.txt
+[andrea@hpmicro ex_18]$ docker run -v $(pwd)/app/logs.txt:/usr/app/logs.txt devopsdockeruh/firs
+t_volume_exercise
+(node:1) ExperimentalWarning: The fs.promises API is experimental
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+^CClosing file
+[andrea@hpmicro ex_18]$ cat app/logs.txt 
+Fri, 24 Apr 2020 12:17:46 GMT
+Fri, 24 Apr 2020 12:17:49 GMT
+Fri, 24 Apr 2020 12:17:52 GMT
+Fri, 24 Apr 2020 12:17:55 GMT
+Secret message is:
+"Volume bind mount is easy"
+Fri, 24 Apr 2020 12:18:01 GMT
+

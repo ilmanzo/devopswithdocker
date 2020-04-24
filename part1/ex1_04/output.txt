@@ -1,0 +1,12 @@
+docker run -it devopsdockeruh/exec_bash_exercise bash
+
+root@6de50b32a21b:/usr/app# tail -f /usr/app/logs.txt
+Thu, 23 Apr 2020 13:08:25 GMT
+Thu, 23 Apr 2020 13:08:29 GMT
+Thu, 23 Apr 2020 13:08:32 GMT
+Thu, 23 Apr 2020 13:08:35 GMT
+Secret message is:
+"Docker is easy"
+Wrote to file /usr/app/logs.txt
+Thu, 23 Apr 2020 13:08:41 GMT
+

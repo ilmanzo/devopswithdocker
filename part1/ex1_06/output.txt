@@ -1,0 +1,16 @@
+[andrea@hpmicro ex_16]$ docker build . -t docker-clock
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM devopsdockeruh/overwrite_cmd_exercise
+ ---> 3d2b622b1849
+Step 2/2 : CMD ["-c 12"]
+ ---> Running in 7cc83dd5b68e
+Removing intermediate container 7cc83dd5b68e
+ ---> 2f4ecb046a2d
+Successfully built 2f4ecb046a2d
+Successfully tagged docker-clock:latest
+[andrea@hpmicro ex_16]$ docker run docker-clock
+13
+14
+15
+16
+17
